@@ -1,0 +1,56 @@
+*,*::after,*::before {
+    box-sizing: border-box;
+}
+.cartona {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.content{
+    background-color: white;
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    top: 50%;
+    transition: 0.4s;
+    transform: translateY(200%);
+}
+.cartona:hover .content{
+    transform: translateY(0);
+}
+.black-layer {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+}
+.light-layer {
+    background-image: url(../images/p-1.jpg);
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.black-layer .light-layer i {
+    margin: 20px;
+}
+#close, #next, #prev, img{
+    cursor: pointer;
+}
+#close {
+    position: absolute;
+    top: 0;
+    right: 0;
+} 
